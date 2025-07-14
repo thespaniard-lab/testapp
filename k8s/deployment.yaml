@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: python-app:latest      # local image name
+        image: python-app:v1.0.1      # added versioning
         imagePullPolicy: Never        # don't try to pull from registry
 
 
