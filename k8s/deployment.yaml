@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: python-app
+  labels:
+    app: python-app
 spec:
   replicas: 1
   selector:
@@ -13,6 +15,9 @@ spec:
         app: python-app
     spec:
       containers:
-        - name: python-app
-          image: thespaniardlab/python-app:latest
-          # Command runs automatically from Dockerfile
+      - name: python-app
+        image: python-app:latest      # local image name
+        imagePullPolicy: Never        # don't try to pull from registry
+
+
+### used local image to simplify. Could have used dockerHub public
