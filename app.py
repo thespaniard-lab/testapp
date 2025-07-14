@@ -1,8 +1,8 @@
 import time
+import sys
 
-print("Hello from ArgoCD deployed Python app!")
-print("Staying alive to avoid CrashLoopBackOff...")
+print("Hello from ArgoCD deployed Python app!", flush=True)
+print("Staying alive to avoid CrashLoopBackOff...", flush=True)
 
-#Keep the container running
 while True:
     time.sleep(60)
